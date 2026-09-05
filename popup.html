@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindCare 2.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <div>
+                <h1>🧠 MindCare</h1>
+                <p>Your space to pause, reflect & care.</p>
+            </div>
+
+            <button id="themeToggle" class="icon-btn" title="Toggle dark mode">
+                🌙
+            </button>
+        </header>
+
+        <section class="dashboard">
+            <div class="stat-card">
+                <span>🔥</span>
+                <strong id="streak">0</strong>
+                <small>Day Streak</small>
+            </div>
+
+            <div class="stat-card">
+                <span>😊</span>
+                <strong id="moodCount">0</strong>
+                <small>Mood Entries</small>
+            </div>
+
+            <div class="stat-card">
+                <span>📔</span>
+                <strong id="journalCount">0</strong>
+                <small>Journal Notes</small>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>How are you feeling today?</h2>
+
+            <div class="moods">
+                <button class="mood" data-mood="Great">😄<span>Great</span></button>
+                <button class="mood" data-mood="Good">🙂<span>Good</span></button>
+                <button class="mood" data-mood="Okay">😐<span>Okay</span></button>
+                <button class="mood" data-mood="Low">😔<span>Low</span></button>
+                <button class="mood" data-mood="Struggling">😟<span>Struggling</span></button>
+            </div>
+
+            <p id="moodMessage" class="message"></p>
+        </section>
+
+        <section class="card">
+            <h2>💭 Today's Thought</h2>
+            <p id="dailyThought"></p>
+        </section>
+
+        <section class="card">
+            <h2>📔 Private Journal</h2>
+
+            <textarea
+                id="journal"
+                maxlength="500"
+                placeholder="Write what's on your mind..."
+            ></textarea>
+
+            <div class="journal-footer">
+                <span id="charCount">0 / 500</span>
+                <button id="saveJournal">Save Note</button>
+            </div>
+
+            <div id="journalHistory"></div>
+        </section>
+
+        <section class="card">
+            <h2>🧠 Self-Reflection</h2>
+            <p>
+                Answer a few questions about the past two weeks
+                to reflect on your wellbeing.
+            </p>
+
+            <button id="startAssessment" class="primary-btn">
+                Start Reflection
+            </button>
+
+            <div id="assessment" class="hidden"></div>
+        </section>
+
+        <section class="card">
+            <h2>🌱 Care Tips</h2>
+
+            <ul class="tips">
+                <li>Take a few slow, deep breaths.</li>
+                <li>Drink some water and take a short break.</li>
+                <li>Talk to someone you trust.</li>
+                <li>Give yourself permission to rest.</li>
+            </ul>
+        </section>
+
+        <section class="help-card">
+            <h2>📞 Need Support?</h2>
+
+            <p>
+                If you feel overwhelmed or unsafe, please reach out
+                to someone you trust or a mental health professional.
+            </p>
+
+            <p><strong>India Tele-MANAS:</strong></p>
+
+            <a href="tel:14416">📞 14416</a>
+            <br>
+            <a href="tel:18008914416">📞 1800-89-14416</a>
+        </section>
+
+        <footer>
+            <p>
+                MindCare is a self-reflection and awareness tool.
+                It does not provide medical diagnosis or treatment.
+            </p>
+        </footer>
+
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
